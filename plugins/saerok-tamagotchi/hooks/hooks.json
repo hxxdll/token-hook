@@ -1,0 +1,29 @@
+{
+  "description": "답변 완료 알림창 + 출력 토큰으로 자라는 다마고치 위젯",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"${CLAUDE_PLUGIN_ROOT}/scripts/done-popup.ps1\""
+          },
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"${CLAUDE_PLUGIN_ROOT}/scripts/tamagotchi.ps1\" -Feed -DataDir \"${CLAUDE_PLUGIN_DATA}\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"${CLAUDE_PLUGIN_ROOT}/scripts/tamagotchi.ps1\" -Ensure -DataDir \"${CLAUDE_PLUGIN_DATA}\""
+          }
+        ]
+      }
+    ]
+  }
+}

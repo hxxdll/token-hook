@@ -1,0 +1,6 @@
+{
+  "name": "saerok-tamagotchi",
+  "description": "답변이 끝나면 화면 가운데 알림창을 띄우고, Claude가 쓴 출력 토큰으로 다마고치 '새록이'를 키웁니다 (Windows + PowerShell 7)",
+  "version": "1.0.0",
+  "author": { "name": "Woori" }
+}
